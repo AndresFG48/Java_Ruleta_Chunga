@@ -101,6 +101,10 @@ public class VentanaRuleta extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
         int numero = aleatorio.nextInt(50);
+        //El fallo estaba en la linea 104 ya que en la linea 103 estabamos llamando a un numero,
+        // y en la siguiente linea en la que decimos que muestre en la pantalla el numero, llamamos a otro
+        // estabamos llamando a otro, para resolver este fallo lo unnico que teniamos que hacer es cambiar
+        // la llamada del numero en la 104.
         resultado.setText(""+ numero);
         if (numero % 2 == 1){
             panelColor.setBackground(Color.red);
